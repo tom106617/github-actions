@@ -7,4 +7,4 @@ jobs:
       - run: printenv | grep '_FUNC'
         env:
           FORMAT_FUNC: ${{ format('{0}, {1}.', 'Hi', 'world') }} # フォーマット
-          JOIN_FUNC: ${{ join(github.event.commits.message, ', ') }}  # カンマで結合
+          JOIN_FUNC: ${{ join(github.event.commits.*.message, ', ') }}  # カンマで結合
