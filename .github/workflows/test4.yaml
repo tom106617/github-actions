@@ -9,3 +9,6 @@ jobs:
           CONTAINS_FUNC: ${{ contains('Hello', 'ell') }}     # 「ell」を含むか
           STARTS_WITH_FUNC: ${{ startsWith('Hello', 'He') }} # 「He」で始まるか
           ENDS_WITH_FUNC: ${{ endsWith('Hello', 'lo') }}     # 「lo」で終わるか
+          CONTAINS_FALSE_FUNC: ${{ contains('Hello', 'ele') }}     # 「ell」を含むか
+          STARTS_WITH_FALSE_FUNC: ${{ startsWith('Hello', 'Hee') }} # 「He」で始まるか
+          ENDS_WITH_FALSE_FUNC: ${{ endsWith('Hello', 'loe') }}     # 「lo」で終わるか
