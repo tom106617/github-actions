@@ -1,6 +1,9 @@
 name: concurrency
 on: push
 
+env: 
+  GTIHUB_WORKFLOW: tom
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -9,5 +12,5 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.workflow }}"  
+      - run: echo "${{ GTIHUB_WORKFLOW }}"  
       
