@@ -12,5 +12,5 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ env.GTIHUB_WORKFLOW_TEST }}"  
+      - run: echo "${{ GTIHUB_WORKFLOW_TEST }}"  
       
