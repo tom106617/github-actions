@@ -2,7 +2,7 @@ name: concurrency
 on: push
 
 env: 
-  GTIHUB_WORKFLOW: tom
+  GTIHUB_WORKFLOW_TEST: tom
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -12,5 +12,5 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ GTIHUB_WORKFLOW }}"  
+      - run: echo "${{ GTIHUB_WORKFLOW_TEST }}"  
       
