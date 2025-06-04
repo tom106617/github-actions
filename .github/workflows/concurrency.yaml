@@ -2,7 +2,7 @@ name: concurrency
 on: push
 
 env: 
-  GTIHUB_WORKFLOW_TEST: tom
+  GTIHUB_WORKFLOW_TEST: ${{ github.workflow }}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
